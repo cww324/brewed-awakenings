@@ -12,7 +12,7 @@ const findProduct = (order, products) => { //allProducts changed to products
 
     for (const product of products) { //allProducts changed to products
         if (product.id === order.productId) {
-            orderProduct = product
+            orderProduct = product.name
         }
     }
 
@@ -25,7 +25,7 @@ export const findEmployee = (order, allEmployees) => {
 
     for (const employee of allEmployees) {
         if (employee.id === order.employeeId) {
-            orderEmployee = employee
+            orderEmployee = employee.name
         }
     }
 
@@ -37,10 +37,10 @@ export const Orders = () => {
     html = "<ul>"
 
     for (const order of orders) {
-        const employee = findEmployee(orders, employees) //changed order to orders is not iterable
+        const employee = findEmployee(order, employees) //changed order to orders is not iterable
         const product = findProduct(order, products)  //changed order to orders is not iterable and added products as second variable
 
-        html += `<li>${product.name} was sold by "${employee.name}" on ${new Date(order.timestamp).toLocaleDateString()}</li>`
+        html += `<li>${product} was sold by "${employee}" on ${new Date(order.timestamp).toLocaleDateString()}</li>`
 // not able to get these .name properties from product, maybe because product isn't an array for some reason?
         // html += `<li>${product.name} was sold by "${employee.name}" on ${new Date(order.timestamp).toLocaleDateString()}</li>` //changed order to orders is not iterable and added products as second variable
     }

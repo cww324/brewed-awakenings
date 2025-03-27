@@ -19,7 +19,7 @@ const applicationHTML = `
 
 <article class="orders">
     <h2>Orders</h2>
-    ${Orders()} //broke cause others broke/
+    ${Orders()}
 </article>
 `
 
