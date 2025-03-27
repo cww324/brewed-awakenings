@@ -11,6 +11,6 @@ export const Employees = () => {
 
     html += "</ul>"
 
-    return htm
+    return html
 }
 

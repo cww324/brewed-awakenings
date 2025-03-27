@@ -1,5 +1,5 @@
 import { Employees } from "./Employees.js"
-import { Orders } from "./Order.js"
+import { Orders } from "./Orders.js"
 import { Products } from "./Products.js"
 
 const mainContainer = document.querySelector("#container")
@@ -19,7 +19,7 @@ const applicationHTML = `
 
 <article class="orders">
     <h2>Orders</h2>
-    ${Orders()}
+    ${Orders()} //broke cause others broke/
 </article>
 `
 
